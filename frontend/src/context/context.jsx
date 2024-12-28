@@ -1,5 +1,4 @@
 import { createContext, useEffect, useState } from "react";
-//import { doctors } from "../assets/assets_frontend/assets";
 export const AppContext = createContext();
 import axios from 'axios'
 import { toast } from "react-toastify";
@@ -8,7 +7,7 @@ const AppContexProvider = (props)=>{
 
     
     const currencySymbol = '$'
-    const backendUrl = import.meta.env.VITE_BACKEND_URL
+    const backendUrl = "https://prescripto-backend-ek9m.onrender.com"
     const [doctors,setDoctors] = useState([])
 
     const [token,setToken] = useState(localStorage.getItem('token')?localStorage.getItem('token'):false)
